@@ -1,6 +1,7 @@
 {
   "name": "ciweb",
   "description": "Herramienta de desarrollo de inteligencia artificial en javascript",
+  "version": "0.0.2",
   "main": "src/JVision.js",
   "authors": [
     "Jhonny Mata"
