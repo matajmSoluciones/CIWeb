@@ -21,9 +21,9 @@ if(!_CONFIG){
 			if(_CONFIG.recognition.async==true){
 				process1=new Worker(_CONFIG.recognition.path);
 				process1.addEventListener("message",function(event){
-					JVision.objects=event.data[1];
+					JVision.objects=event.data;
 					if(process1.call){
-						process1.call(event.data);						
+						process1.call(JVision.objects);
 					}
 					if(_CONFIG.animation.mode=="animation" && !JVision.input.ended && !JVision.input.paused){
 						setTimeout(calculeAsync, _CONFIG.recognition.delay);
@@ -116,8 +116,8 @@ if(!_CONFIG){
 		}		
 	};
 	Global.JVision=JVision;
+	
 function calculeAsync(){
-	console.log("ASYNC");
 	var img=JVision.Capture();
 	process1.postMessage(img,[new ArrayBuffer(img)]);
 }

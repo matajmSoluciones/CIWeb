@@ -1,17 +1,16 @@
-importScripts("VisionConfig.js");
-if(!_CONFIG){
-	throw new Error("Este modulo requiere un fichero de configuración inicial cargado genere un archivo con la variable _CONFIG")
-}
-if(_CONFIG.load){
-	_CONFIG.load.forEach(function(row){
+importScripts("module.config.js");
+if(_MODULE){
+	_MODULE.forEach(function(row){
 		importScripts(row);
 	});
+}
+if(!_CONFIG){
+	throw new Error("Este modulo requiere un fichero de configuración inicial cargado genere un archivo con la variable _CONFIG")
 }
 if(!_WEIGHTS){
 	throw new Error("Este modulo requiere un fichero de configuración pesos cargado en la configuración de la app cargue un modulo de pesos.")
 }
 self.addEventListener("message",function(event){
-	console.time("PROBANDO ASYNC PROMISE");
 	var feacture=JSVision.Feacture.LBP(event.data);	
 	var windows=[],coords=[],step=[[],[]];
 	JSVision.window.Pyramid.foreach(feacture[0],_CONFIG.recognition.pyramid,_CONFIG.canonical.width,_CONFIG.canonical.height,function(wind){
@@ -36,8 +35,6 @@ self.addEventListener("message",function(event){
 	for(var i=0,n=step.length;i<n;i++){
 		step[i]=JSVision.step.filter(step[i]);
 	}
-	console.log(step);
 	//Comprobar solapamiento y comparar agrupaciones	
-	self.postMessage([feacture[0],step]);
-	console.timeEnd("PROBANDO ASYNC PROMISE");
+	self.postMessage(step,[new ArrayBuffer(step)]);
 });
