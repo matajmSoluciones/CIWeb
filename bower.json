@@ -1,0 +1,25 @@
+{
+  "name": "ciweb",
+  "description": "Herramienta de desarrollo de inteligencia artificial en javascript",
+  "version": "0.0.3",
+  "main": "src/JVision.js",
+  "authors": [
+    "Jhonny Mata"
+  ],
+  "license": "GNU 2.0",
+  "keywords": [
+    "ci",
+    "web",
+    "inteligencia",
+    "artificial"
+  ],
+  "homepage": "https://github.com/matajmSoluciones/CIWeb",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "src",
+    "tests"
+  ]
+}

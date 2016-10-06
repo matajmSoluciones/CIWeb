@@ -1,0 +1,6 @@
+*.[oa]
+*~
+vendor/
+typings/
+node_modules/
+logs/

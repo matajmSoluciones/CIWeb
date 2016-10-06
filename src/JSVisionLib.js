@@ -16,23 +16,23 @@
 					var byte=new Int16Array(8),sum=0;
 					var coords=Morphology.Position.set(i,src.width,4);
 					var indexs=new Int32Array([
-						(coords.x-1>0) ? Morphology.Position.get(coords.x-1,coords.y,src.width,4) : -1,
-						(coords.x-1>0) ? Morphology.Position.get(coords.x-1,coords.y+1,src.width,4) : -1,
+						(coords.x-1>=0) ? Morphology.Position.get(coords.x-1,coords.y,src.width,4) : -1,
+						(coords.x-1>=0) ? Morphology.Position.get(coords.x-1,coords.y+1,src.width,4) : -1,
 						Morphology.Position.get(coords.x,coords.y+1,src.width,4),
-						(coords.x+1<=src.width) ? Morphology.Position.get(coords.x+1,coords.y+1,src.width,4) : -1,
-						(coords.x+1<=src.width) ? Morphology.Position.get(coords.x+1,coords.y,src.width,4) : -1,
-						(coords.x+1<=src.width) ? Morphology.Position.get(coords.x+1,coords.y-1,src.width,4) : -1,
-						Morphology.Position.get(coords.x,coords.y-1,src.width,4),
-						(coords.x-1>=0) ? Morphology.Position.get(coords.x-1,coords.y-1,src.width,4) : -1
+						(coords.x+1<src.width) ? Morphology.Position.get(coords.x+1,coords.y+1,src.width,4) : -1,
+						(coords.x+1<src.width) ? Morphology.Position.get(coords.x+1,coords.y,src.width,4) : -1,
+						(coords.x+1<src.width && coords.y-1>=0) ? Morphology.Position.get(coords.x+1,coords.y-1,src.width,4) : -1,
+						(coords.y-1>=0)? Morphology.Position.get(coords.x,coords.y-1,src.width,4) : -1,
+						(coords.x-1>=0 && coords.y-1>=0) ? Morphology.Position.get(coords.x-1,coords.y-1,src.width,4) : -1
 						]);
 					for (var j=0,m=indexs.length;j<m;j++){
-						if(src.data[indexs[j]]==undefined || src.data[indexs[j]+1]==undefined || src.data[indexs[j]+2]==undefined || src.data[i]==undefined || src.data[i+1]==undefined || src.data[i+2]==undefined){							
+						if(src.data[indexs[j]]==undefined || src.data[indexs[j]+1]==undefined || src.data[indexs[j]+2]==undefined){							
 							continue;
 						}						
 						var color1=Colors.RGB.Effects.Color.GrayScale(src.data[indexs[j]],src.data[indexs[j]+1],src.data[indexs[j]+2]);
 						var color2=Colors.RGB.Effects.Color.GrayScale(src.data[i],src.data[i+1],src.data[i+2]);
-						byte[j]=(color1-color2>=T) ? Math.pow(2,j) : 0;
-						sum+=byte[j];						
+						byte[j]=(color1-color2>=T) ? Math.pow(2,j) : 0;						
+						sum+=byte[j];
 					}
 					destiny.data[i]=sum;
 					destiny.data[i+1]=sum;
@@ -141,13 +141,13 @@
 				foreach:function(src,step,Wm,Hm,callback){
 					for(var i=0,w=src.width,h=src.height;w>=Wm && h>=Hm;i++,w=Math.round(src.width/Math.pow(step,i)),h=Math.round(src.height/Math.pow(step,i))){
 						var wind=src.scale(w,h);
-						callback(wind);
+						callback(wind,i);
 					}
 				},
 				filter:function(src,step,Wm,Hm,callback){
 					var windows=[];
-					Global.JSVision.window.Pyramid.foreach(src,step,Wm,Hm,function(wind){
-						var test=callback(wind) || false;
+					Global.JSVision.window.Pyramid.foreach(src,step,Wm,Hm,function(wind,index){
+						var test=callback(wind,index) || false;
 						if(test==true){
 							windows.push(wind);
 						}
@@ -156,8 +156,8 @@
 				},
 				map:function(src,step,Wm,Hm,callback){
 					var windows=[];
-					Global.JSVision.window.Pyramid.foreach(src,step,Wm,Hm,function(wind){
-						windows.push(callback(wind));
+					Global.JSVision.window.Pyramid.foreach(src,step,Wm,Hm,function(wind,index){
+						windows.push(callback(wind,index));
 					});
 					return windows;
 				}

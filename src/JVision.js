@@ -10,6 +10,8 @@ if(!_CONFIG){
 		objects:[[],[]],		
 		input:null,
 		ouput:null,
+		overlap:null,
+		buffer:null,
 		init:function(Input,ouput,callback){
 			if(!(ouput instanceof CanvasRenderingContext2D)){
 				throw new Error("El window debe ser un contexto del canvas final");
@@ -21,9 +23,9 @@ if(!_CONFIG){
 			if(_CONFIG.recognition.async==true){
 				process1=new Worker(_CONFIG.recognition.path);
 				process1.addEventListener("message",function(event){
-					JVision.objects=event.data[1];
+					JVision.objects=event.data;
 					if(process1.call){
-						process1.call(event.data);						
+						process1.call(JVision.objects);
 					}
 					if(_CONFIG.animation.mode=="animation" && !JVision.input.ended && !JVision.input.paused){
 						setTimeout(calculeAsync, _CONFIG.recognition.delay);
@@ -52,23 +54,33 @@ if(!_CONFIG){
 			JVision.window=lienzo.context;
 			JVision.ouput=ouput;
 			JVision.input=Input;
+			JVision.buffer=ouput.canvas.cloneNode(true).getContext("2d");			
+			if(_CONFIG.animation.overlap==true){
+				JVision.overlap=ouput.canvas.cloneNode(true).getContext("2d");			
+			}
 			return lienzo.context;
 		},
-		Render:function(event){
+		Render:function(event){			
 			if(!JVision.ouput && !JVision.window){
 				throw new Error("Establezca una salida para poder Renderizar!");
 			}
-			JVision.window.drawImage(JVision.input,0,0,_CONFIG.window.width,_CONFIG.window.height);			
-			JVision.ouput.drawImage(JVision.input,0,0,JVision.ouput.canvas.width,JVision.ouput.canvas.height);
+			JVision.buffer.clearRect(0,0,JVision.buffer.canvas.width,JVision.buffer.canvas.height);
+			JVision.window.drawImage(JVision.input,0,0,_CONFIG.window.width,_CONFIG.window.height);
+			JVision.buffer.drawImage(JVision.input,0,0,JVision.ouput.canvas.width,JVision.ouput.canvas.height);
+			if(_CONFIG.animation.overlap==true){
+				JVision.buffer.drawImage(JVision.overlap.canvas,0,0,JVision.ouput.canvas.width,JVision.ouput.canvas.height);
+			}
 			for(var i=0,n=JVision.objects.length;i<n;i++){
 				for(var j=0,m=JVision.objects[i].length;j<m;j++){								
-					JVision.ouput.beginPath();
-						JVision.ouput.rect(JVision.objects[i][j].x,JVision.objects[i][j].y,JVision.objects[i][j].width,JVision.objects[i][j].height);
-						JVision.ouput.strokeStyle=(i==0) ? "red" : "blue";
-						JVision.ouput.lineWeight=3;
-						JVision.ouput.stroke();
+					JVision.buffer.beginPath();
+						JVision.buffer.rect(JVision.objects[i][j].x,JVision.objects[i][j].y,JVision.objects[i][j].width,JVision.objects[i][j].height);
+						JVision.buffer.strokeStyle=(i==0) ? "red" : "blue";
+						JVision.buffer.lineWeight=3;
+						JVision.buffer.stroke();
 				}
 			}
+			JVision.ouput.clearRect(0,0,JVision.ouput.canvas.width,JVision.ouput.canvas.height);
+			JVision.ouput.drawImage(JVision.buffer.canvas,0,0,JVision.ouput.canvas.width,JVision.ouput.canvas.height);
 			if(_CONFIG.animation.mode=="animation"){
 				if(JVision.input.paused || JVision.input.ended){
 					window.cancelAnimationFrame(JVision.Render);
@@ -83,19 +95,12 @@ if(!_CONFIG){
 		},
 		classifyPyramid:function(src,step,Wmin,Hmin){
 			var windows=[];
-			var a=document.createElement("canvas").getContext("2d");
-			for(var y=src.height-step,x=src.width-step;y>Hmin && x>Wmin;y-=step,x-=step){
-			//for(var y=src.height-step;y>Hmin;y-=step){	
-				//for(var x=src.width-step;x>Wmin;x-=step){					
-					a.canvas.width=x;
-					a.canvas.height=y;
-					a.drawImage(src,0,0,x,y);
-					windows.push({
-						width:a.canvas.width,
-						height:a.canvas.height,
-						windows:JVision.getWindows(a,_CONFIG.Canonical.width,_CONFIG.Canonical.height,_CONFIG.Canonical.step)
-					});
-				//}
+			for(var i=0,w=src.width,h=src.height;w>=Wmin && h>=Hmin;i++,w=Math.round(src.width/Math.pow(step,i)),h=Math.round(src.height/Math.pow(step,i))){
+				var a=document.createElement("canvas").getContext("2d");
+				a.canvas.width=w;
+				a.canvas.height=h;
+				a.drawImage(src,0,0,w,h);
+				windows.push(a);
 			}
 			return windows;
 		},
@@ -116,8 +121,8 @@ if(!_CONFIG){
 		}		
 	};
 	Global.JVision=JVision;
+	
 function calculeAsync(){
-	console.log("ASYNC");
 	var img=JVision.Capture();
 	process1.postMessage(img,[new ArrayBuffer(img)]);
 }

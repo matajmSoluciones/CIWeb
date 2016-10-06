@@ -9,7 +9,6 @@
 			}
 			var destiny=new Uint8ClampedArray(I.length);
 			if(mode!="BIN"){
-				mode="RGB";
 				var centerCC={x:Math.floor((K.width-1)/2),y:Math.floor((K.height-1)/2),index:0};
 				centerCC.index=Math.floor(centerCC.x+centerCC.y*K.width);				
 				for(var i=0,n=I.length;i<n;i+=4){
@@ -514,11 +513,10 @@
 			};
 			rgb.Normalize=function(){
 				var xmax={r:Math.max.apply(null,this.r),g:Math.max.apply(null,this.g),b:Math.max.apply(null,this.b)};
-				var xmin={r:Math.min.apply(null,this.r),g:Math.min.apply(null,this.g),b:Math.min.apply(null,this.b)};
-				for(var i=0;i<256;i++){
-					rgb.r[i]=(rgb.r[i]-xmin.r)/(xmax.r-xmin.r);
-					rgb.g[i]=(rgb.g[i]-xmin.g)/(xmax.g-xmin.g);
-					rgb.b[i]=(rgb.b[i]-xmin.b)/(xmax.b-xmin.b);
+				for(var i=0;i<256;i++){					
+					rgb.r[i]=rgb.r[i]/xmax.r;
+					rgb.g[i]=rgb.g[i]/xmax.g;
+					rgb.b[i]=rgb.b[i]/xmax.b;
 				}
 			}
 			rgb.Discreet=function(){
@@ -556,7 +554,7 @@
 				};
 			}else{
 				rgb.Calcule=function(){
-					for(var i=0,n=img.length;i<n;i+=4){
+					for(var i=0,n=img.length;i<n;i+=4){						
 						this[Colors.RGB.Effects.Color.GrayScale(img[i],img[i+1],img[i+2])]++;					
 					}
 				};
@@ -595,9 +593,8 @@
 			}
 			rgb.Normalize=function(){
 				var xmax=Math.max.apply(null,this);
-				var xmin=Math.min.apply(null,this);
 				for(var i=0;i<256;i++){
-					rgb[i]=(rgb[i]-xmin)/(xmax-xmin);
+					rgb[i]=rgb[i]/xmax;
 				}
 			}
 		};
