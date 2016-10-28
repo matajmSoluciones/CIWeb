@@ -23,7 +23,9 @@ if(!_CONFIG){
 			if(_CONFIG.recognition.async==true){
 				process1=new Worker(_CONFIG.recognition.path);
 				process1.addEventListener("message",function(event){
-					JVision.objects=event.data;
+					if(event.data){
+						JVision.objects=event.data;						
+					}
 					if(process1.call){
 						process1.call(JVision.objects);
 					}

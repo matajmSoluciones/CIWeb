@@ -28,28 +28,6 @@
 				}
 			}
 			return true;
-		},
-		OneVsAll:function(input,weight,T){
-			if(!T){
-				T=0.5;
-			}
-			for(var i=0,max=0,h=MFunction.Sigmoidea(Matrix.inmultiply(input,weight))[0],n=h.length;i<n;i++){						
-				if(h[i]>max){
-					max=h[i];
-					value=i;
-				}
-			}
-			if(max<T){
-				return false;
-			}
-			return [value,max];
-			/*if(value>-1){
-				if(max<T){
-					value=-1;
-				}
-			}		*/
-			//return [value,max];
-		}
+		},		
 	}
-	Global.JV
 })(this);

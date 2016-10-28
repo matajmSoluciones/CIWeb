@@ -19,7 +19,8 @@ self.addEventListener("message",function(event){
 			hist.Normalize();			
 			var input=[Float32Array.from([1].concat(Array.from(hist)))];
 			if(JVCascade.Strong(input,_CASCADE)){
-				var h=JVCascade.OneVsAll(input,_WEIGHT);				
+				input=MFunction.Sigmoidea(Matrix.inmultiply(input,_WEIGHT))[0];
+				var h=Tbrain.OneVsAll(input);
 				if(h){
 					var index1=Morphology.Position.scale(coord.x,coord.y,wind.width,wind.height,_CONFIG.window.width,_CONFIG.window.height);
 					var index2=Morphology.Position.scale(coord.x+(coord.width-1),coord.y+(coord.height-1),wind.width,wind.height,_CONFIG.ouput.width,_CONFIG.ouput.height);

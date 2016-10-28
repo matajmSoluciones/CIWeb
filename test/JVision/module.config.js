@@ -5,6 +5,7 @@ var _MODULE=[
 	"VisionConfig.js",
 	"Matrix.js",
 	"TurboColors.js",
+	"TurboBrain.js",
 	"Morphology.js",
 	"JSVisionLib.js",
 	"JVCascade.js",
