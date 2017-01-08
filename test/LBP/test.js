@@ -1,3 +1,13 @@
+describe('extraer LBP',function(){
+	it('LBP image 3-D + A',function(){
+		var image=new ImageData(3,3);
+		image.data= new Uint8ClampedArray([8,8,8,255,2,2,2,255,7,7,7,255,2,2,2,255,7,7,7,255,8,8,8,255,7,7,7,255,7,7,7,255,1,1,1,255]);
+		console.log(image);
+		expect(2).toBe(2);
+	})
+});
+
+/*
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,3 +87,4 @@
 	</script>
 </body>
 </html>
+*/
