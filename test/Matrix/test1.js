@@ -482,4 +482,67 @@ describe("Operaciones básicas de matrices 2-D", function() {
 			}
 		}	
 	});
+	it("Matriz seno", function() {
+		var D=[
+			[1,-2],
+			[3,4]
+		],result=[
+			[0.8414709568023682,-0.9092974066734314],
+			[0.14112000167369843,-0.756802499294281]
+		];
+		var c=Matrix.sin(D);
+		expect(c.length).toBe(result.length);
+		for(var i=0,n=c.length;i<n;i++){
+			expect(c[i].length).toBe(result[i].length);
+			for(var j=0,m=c[i].length;j<m;j++){
+				expect(c[i][j]).toBe(result[i][j]);    		
+			}
+		}	
+	});
+	it("Matriz redondeada", function() {
+		var D=[
+			[1,-1.51],
+			[2.5,4]
+		],result=[
+			[1,-2],
+			[3,4]
+		];
+		var c=Matrix.round(D);
+		expect(c.length).toBe(result.length);
+		for(var i=0,n=c.length;i<n;i++){
+			expect(c[i].length).toBe(result[i].length);
+			for(var j=0,m=c[i].length;j<m;j++){
+				expect(c[i][j]).toBe(result[i][j]);    		
+			}
+		}	
+	});
+});
+describe('Funciones Aritmeticas Matriciales',function(){
+	it('Sigmoidal valor 0',function(){
+		var a=MFunction.Sigmoidea(0);
+		expect(a).toBe(0.5);
+	});
+	it('Sigmoidal valor 1',function(){
+		var a=MFunction.Sigmoidea(1);
+		expect(a).toBe(0.7310585786300049);
+	});
+	it('Sigmoidal matricial',function(){
+		var A=[
+			[1,2,3],
+			[-1,0,5],
+			[-2,-5,3]
+		],result=[
+			[0.7310585786300049,0.8807970779778823,0.9525741268224334],
+			[0.2689414213699951,0.5,0.9933071490757153],
+			[0.11920292202211755,0.0066928509242848554,0.9525741268224334]
+		];
+		var c=MFunction.Sigmoidea(A);
+		expect(c.length).toBe(result.length);
+		for(var i=0,n=c.length;i<n;i++){
+			expect(c[i].length).toBe(result[i].length);
+			for(var j=0,m=c[i].length;j<m;j++){
+				expect(c[i][j]).toBe(result[i][j]);    		
+			}
+		}
+	});
 });
