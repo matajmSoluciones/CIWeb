@@ -7,7 +7,7 @@ if(_MODULE){
 if(!_CONFIG){
 	throw new Error("Este modulo requiere un fichero de configuración inicial cargado genere un archivo con la variable _CONFIG")
 }
-if(!_CASCADE || !_WEIGHT){
+if(!_CASCADE || !_WEIGHT|| !_SCALES){
 	throw new Error("Este modulo requiere un fichero de set en cascada, en la configuración de la app cargue un modulo de pesos.")
 }
 self.addEventListener("message",function(event){
@@ -16,9 +16,9 @@ self.addEventListener("message",function(event){
 	JSVision.window.Pyramid.foreach(feacture[0],_CONFIG.recognition.pyramid,_CONFIG.canonical.width,_CONFIG.canonical.height,function(wind){
 		JSVision.window.foreach(wind,_CONFIG.recognition.step,_CONFIG.canonical.width,_CONFIG.canonical.height,function(row,coord){			
 			var hist=Histograms(row.data,"GRAY");
-			hist.Normalize();			
+			hist.Normalize();
 			var input=[Float32Array.from([1].concat(Array.from(hist)))];
-			if(JVCascade.Strong(input,_CASCADE)){
+			if(JVCascade.Strong(input,_CASCADE,_SCALES,_CONFIG.recognition.positive)){
 				input=MFunction.Sigmoidea(Matrix.inmultiply(input,_WEIGHT))[0];
 				var h=Tbrain.OneVsAll(input);
 				if(h){
@@ -36,9 +36,9 @@ self.addEventListener("message",function(event){
 			}
 		})
 	});
-	for(var i=0,n=step.length;i<n;i++){
+	/*for(var i=0,n=step.length;i<n;i++){
 		step[i]=JSVision.step.filter(step[i]);
-	}
+	}*/
 	var success=new CustomEvent("success",{detail:step});
 	self.dispatchEvent(success);
 });

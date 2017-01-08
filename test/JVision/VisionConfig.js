@@ -4,8 +4,8 @@ var _CONFIG={
 		height:24
 	},
 	window:{
-		width:350,
-		height:200
+		width:100,
+		height:50
 	},
 	ouput:{
 		width:750,
@@ -18,9 +18,10 @@ var _CONFIG={
 	recognition:{
 		async:true,
 		mode:"LBP",
-		step:15,
+		step:7,
 		pyramid:1.2,
 		path:"Worker.js",
-		delay:100	
+		delay:100,
+		positive:0
 	}
 }

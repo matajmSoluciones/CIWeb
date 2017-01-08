@@ -21,5 +21,8 @@
     "test",
     "src",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "jasmine-core": "https://github.com/jasmine/jasmine.git#^2.5.2"
+  }
 }

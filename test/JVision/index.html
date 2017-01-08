@@ -15,24 +15,35 @@
 	<script src="JVision.js" type="text/javascript"></script>
 	<script src="Morphology.js" type="text/javascript"></script>
 	<script>
+		var _OPENCVTest=Morphology.Position.scale(21,24,121,163,750,350);
+		_OPENCVTest.width=515;
+		_OPENCVTest.width=178;
 		var lienzo,link,parent,objects=[[],[]];
-		window.addEventListener("load",function(){
+		window.addEventListener("load",function(){			
 			var file=document.getElementById("file");			
 			//var input=document.getElementById("input");
 			parent=document.getElementById("windows");
 			var input=new Image();
 			lienzo=JVision.init(input,document.getElementById("ouput").getContext("2d"),function(data){
+				console.timeEnd("hola");
+				for(var i=0,n=data[0].length;i<n;i++){
+					if(data[0][i].x==_OPENCVTest.x && data[0][i].x==_OPENCVTest.y){
+						console.log("entrado el de opencv faces en el indice: "+i);
+						break;
+					}
+				}
 				JVision.Render();
 			});
 			document.body.appendChild(JVision.window.canvas);
 			//JVision.input.addEventListener("play",get);			
 			//document.body.appendChild(input);
 			input.src="img.png";
-			file.addEventListener("change",function(event){
-				console.log(event);
+			file.addEventListener("change",function(event){				
 				var blob=event.target.files[0];
 				input.src=window.URL.createObjectURL(blob);
+				console.time("hola");
 			})
+			console.time("hola");
 		})
 		
 	</script>
