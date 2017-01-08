@@ -4,3 +4,4 @@ vendor/
 typings/
 node_modules/
 logs/
+bower_components
