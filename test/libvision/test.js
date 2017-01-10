@@ -1,9 +1,38 @@
 describe('extraer LBP',function(){
+	var input=new ImageData(350,200),error=0;
+	for(var i=0,j=0,n=input.data.length;i<n;i+=4,j++){
+		input.data[i]=binary1[j];
+		input.data[i+1]=binary1[j];
+		input.data[i+2]=binary1[j];
+		input.data[i+3]=255;
+	}
+	var LBP=JSVision.Feacture.LBP(input);
 	it('LBP image 3-D + A',function(){
+		var imgData=[8,8,8,255,2,2,2,255,7,7,7,255,2,2,2,255,7,7,7,255,8,8,8,255,7,7,7,255,7,7,7,255,1,1,1,255];
+		var resultData=[0,0,0,255,31,31,31,255,6,6,6,255,124,124,124,255,182,182,182,255,0,0,0,255,48,48,48,255,97,97,97,255,193,193,193,255];
 		var image=new ImageData(3,3);
-		image.data= new Uint8ClampedArray([8,8,8,255,2,2,2,255,7,7,7,255,2,2,2,255,7,7,7,255,8,8,8,255,7,7,7,255,7,7,7,255,1,1,1,255]);
-		console.log(image);
-		expect(2).toBe(2);
+		for(var i=0,n=image.data.length;i<n;i++){
+			image.data[i]=imgData[i];
+		}
+		var LBP=JSVision.Feacture.LBP(image);
+		for(var i=0,n=LBP[0].data.length;i<n;i++){			
+			expect(LBP[0].data[i]).toBe(resultData[i]);
+		}
+	});
+	it('errores de comparacion imagen',function(){
+		for(var i=0,j=0,n=LBP[0].data.length;i<n;i+=4,j++){
+			if(LBP[0].data[i]!=LBP1[j]){
+				error++;
+				//break;
+			}
+		}
+		expect(error).toBe(0);		
+	});
+	it('histograma comparación',function(){
+		console.log(LBP[1],histogram1);
+		for(var i=0,j=0,n=LBP[1].length;i<n;i++){
+			expect(LBP[1][i]).toBe(histogram1[i]);			
+		}
 	})
 });
 

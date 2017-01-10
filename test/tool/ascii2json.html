@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Parsear matriz ascii a json</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<label for="M">Columnas:</label>
+	<input type="number" id="M" value="0"><br>
+	<label for="N">Filas:</label>
+	<input type="number" id="N" value="0"><br>
+	<label for="N">Dimenciones:</label>
+	<input type="number" id="D" value="1" min="1"><br>
+	<button id="load">Procesar</button>
+	<script>
+		window.addEventListener('load',function(){
+			var button=document.getElementById("load");
+			var column=document.getElementById("M");
+			var rows=document.getElementById("N");
+			var dimension=document.getElementById("D");
+			var worke=new Worker("ascii2json.js");
+			worke.addEventListener("message",function(event){
+				var file=new Blob([event.data],{type:"application/json"});
+				var url=window.URL.createObjectURL(file);
+					var a=document.createElement("a");
+					a.download="data.json";
+					a.href=url;
+					var clicEvent = new MouseEvent('click', {
+						'view': window,
+						'bubbles': true,
+						'cancelable': true
+					});
+					//Simulamos un clic del usuario
+					//no es necesario agregar el link al DOM.
+					a.dispatchEvent(clicEvent);
+			});
+			button.addEventListener("click",function(){
+				var input=document.createElement("input");
+				input.type="file";
+				input.addEventListener("change",function(event){
+					var file=event.target.files[0];
+							var reader=new FileReader();
+							reader.onload=function(e){
+								worke.postMessage({text:e.target.result,column:parseInt(column.value),row:parseInt(rows.value),dimension:parseInt(dimension.value)});								
+							};
+							reader.readAsText(file);
+				});
+				input.click();
+			});
+		});
+	</script>
+</body>
+</html>

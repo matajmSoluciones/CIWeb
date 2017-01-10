@@ -44,7 +44,6 @@
 						var wc=Matrix.Reshape(row,parseInt(column.value),parseInt(rows.value));
 						return wc;
 					});
-					console.log(matrix);
 					var file=new Blob([JSON.stringify(matrix,2,"\t")],{type:"application/json"});
 					var url=window.URL.createObjectURL(file);
 					var a=document.createElement("a");
