@@ -3,8 +3,11 @@
 	Librería Javascript para el desarollo de redes neuronales en javascript, optimizando y facilitando el desarrollo
 	de los modelos matemáticos-
 	Desarrollado por Jhonny Mata
-	Derechos Reservados Matajm Soluciones 2016.
-	El uso de esta librería es bajo Licencia GNU 2.0 pero su uso es exclusivo del autor.
+	Derechos Reservados Matajm Soluciones 2017.
+	El uso de esta librería es bajo Licencia GNU 2.0 pero su uso es exclusivo del autor.	
+*/
+/**
+* @param{Object} Global Encapsula los objetos a la variable global del entorno en este momento
 */
 (function(Global){
 	if(!Global.Matrix){

@@ -24,13 +24,13 @@
 						(coords.x+1<src.width && coords.y-1>=0) ? Morphology.Position.get(coords.x+1,coords.y-1,src.width,4) : -1,
 						(coords.y-1>=0)? Morphology.Position.get(coords.x,coords.y-1,src.width,4) : -1,
 						(coords.x-1>=0 && coords.y-1>=0) ? Morphology.Position.get(coords.x-1,coords.y-1,src.width,4) : -1
-						]);
+					]);
+					var color2=Colors.RGB.Effects.Color.GrayScale(src.data[i],src.data[i+1],src.data[i+2]);
 					for (var j=0,m=indexs.length;j<m;j++){
 						if(src.data[indexs[j]]==undefined || src.data[indexs[j]+1]==undefined || src.data[indexs[j]+2]==undefined){							
 							continue;
 						}						
 						var color1=Colors.RGB.Effects.Color.GrayScale(src.data[indexs[j]],src.data[indexs[j]+1],src.data[indexs[j]+2]);
-						var color2=Colors.RGB.Effects.Color.GrayScale(src.data[i],src.data[i+1],src.data[i+2]);
 						byte[j]=(color1-color2>=T) ? Math.pow(2,j) : 0;						
 						sum+=byte[j];
 					}

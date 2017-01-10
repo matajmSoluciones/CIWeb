@@ -1,5 +1,23 @@
+/**
+* TurboColors V1.1
+* Procese matrices imagenes en el lado cliente al estilo canvas
+* @author Jhonny Mata
+*/
+/**
+* @param{Object} Global Encapsula los objetos a la variable global del entorno en este momento
+*/
 (function(Global){
 	var Colors={
+		/**
+		* Convolution
+		* @param{Uint8ClampedArray} I
+		* @param{Object} K
+		* @param{Number} width
+		* @param{Number} ESCALAR
+		* @param{Number} BIAS
+		* @param{String} mode
+		* @return{Uint8ClampedArray}
+		*/
 		Convolution:function(I,K,width,ESCALAR,BIAS,mode){
 			if(ESCALAR==undefined || ESCALAR==null){
 				ESCALAR=1;
@@ -53,6 +71,12 @@
 			return destiny;
 		},
 		RGB:{
+			/**
+			* @param{Number} R
+			* @param{Number} G
+			* @param{Number} B
+			* @return{Object}
+			*/
 			parseToHSV:function(R,G,B){
 				var hsv={h:0,s:0,v:0},max=Math.max(R, G, B),min=Math.min(R, G, B);
 				if(max!=min){
@@ -78,6 +102,12 @@
 				hsv.v=(R+G+B)/3;			
 				return hsv;
 			},
+			/**
+			* @param{Number} R
+			* @param{Number} G
+			* @param{Number} B
+			* @return{Object}
+			*/
 			parseToHSL:function(r,g,b){
 				var max=Math.max(r, g, b),min=Math.min(r, g, b),hsl={h:0,s:0,l:0};
 				if(max!=min){
@@ -107,11 +137,23 @@
 				}
 				return hsl;
 			},
+			/**
+			* @param{Number} R
+			* @param{Number} G
+			* @param{Number} B
+			* @return{Object}
+			*/
 			parseToNormalized:function(r,g,b){
 				var sum=r+g+b;
-				var RnGnBn={Rn:(r/sum),Gn:(g/sum),Bn:(b/sum)};
+				var RnGnBn={r:(r/sum),g:(g/sum),b:(b/sum)};
     			return RnGnBn;
 			},
+			/**
+			* @param{Number} R
+			* @param{Number} G
+			* @param{Number} B
+			* @return{Object}
+			*/
 			parseToYCrCb:function(r,g,b){
 				var YCrCb={
 					y:Math.round((0.257*r)+(0.504*g)+(0.098*b)+16),
@@ -120,9 +162,15 @@
 				};
 				return YCrCb;
 			},
+			/**
+			* @param{Number} R
+			* @param{Number} G
+			* @param{Number} B
+			* @return{Object}
+			*/
 			parseToTLS:function(r,g,b){
 				var TLS={t:0,l:0,s:0},RnGnBn=Colors.RGB.parseToNormalized(r,g,b);
-				var r1=RnGnBn.Rn-(1/3),g1=RnGnBn.Gn-(1/3),b1=RnGnBn.Bn-(1/3);
+				var r1=RnGnBn.r-(1/3),g1=RnGnBn.g-(1/3),b1=RnGnBn.b-(1/3);
 				if(g1>0){
 					TLS.t=(Math.atan(r1/g1))/(2*Math.PI)+(1/4);
 				}else{
@@ -134,6 +182,12 @@
 				TLS.l=0.299*r1+0.587*g1+0.114*b1;
 				return TLS;
 			},
+			/**
+			* @param{Number} R
+			* @param{Number} G
+			* @param{Number} B
+			* @return{Object}
+			*/
 			parseToLux:function(r,g,b){
 				var LUX={l:Math.pow((r+1),0.3)*Math.pow((g+1),0.5)*Math.pow((b+1),0.1),u:0};
 				if(r<LUX.l){
@@ -143,6 +197,12 @@
 				}
 				return LUX.u;
 			},
+			/**
+			* @param{Number} R
+			* @param{Number} G
+			* @param{Number} B
+			* @return{Boolean}
+			*/
 			isHuman:function(r,g,b){
 				return (((r>95) && (g>40 && g <100) && (b>20) && ((Math.max(r,g,b) - Math.min(r,g,b)) > 15) && (Math.abs(r-g)>15) && (r > g) && (r > b)));
 			},
