@@ -59,4 +59,14 @@ describe("Regresion Logistica", function() {
 		var J=TBrain.LogisticRegression.Cost(X,W,Y);		
 		expect(J).toBe(0.7004226064463912);		
 	});
+	it("Algoritmo todos contra uno",function(){
+		var Y=[ 
+			1,
+  			0 
+  		];
+		var H=TBrain.LogisticRegression.Propagation(X,W);
+		var winner=TBrain.OneVsAll(H,0.5);
+		expect(winner[1]).toBe(0.9798806759310578);	
+		expect(winner[0]).toBe(0);	
+	});
 });
