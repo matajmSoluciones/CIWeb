@@ -1,1 +1,0 @@
-/home/mata/Documentos/WebProject/CIWeb/data/LBPClassify.js

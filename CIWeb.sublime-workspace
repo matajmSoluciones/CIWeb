@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"hist",
+				"histogram1"
+			],
+			[
+				"matr",
+				"matrix2"
+			],
+			[
+				"row",
+				"row2"
+			],
+			[
+				"stri",
+				"string"
+			],
+			[
+				"strin",
+				"string2Array"
+			],
+			[
+				"strign",
+				"STRING"
+			],
+			[
 				"index",
 				"index1"
 			],
@@ -174,10 +198,6 @@
 			[
 				"step",
 				"stephand"
-			],
-			[
-				"hist",
-				"hist"
 			],
 			[
 				"le",
@@ -494,54 +514,25 @@
 			[
 				"fiel",
 				"field"
-			],
-			[
-				"DNI_PEOPL",
-				"DNI_PEOPLE1"
-			],
-			[
-				"inne",
-				"innerWidth"
-			],
-			[
-				"sear",
-				"searchreferences"
-			],
-			[
-				"enco",
-				"encodeURI"
-			],
-			[
-				"data",
-				"datalist"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "test/Matrix/inmultiply.html",
+			"file": "test/TurboColors/test.js",
 			"settings":
 			{
-				"buffer_size": 740,
+				"buffer_size": 1595,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "test/Matrix/test1.js",
+			"file": "src/TurboColors.js",
 			"settings":
 			{
-				"buffer_size": 3027,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "test/Matrix/Matrix.js",
-			"settings":
-			{
-				"buffer_size": 22477,
+				"buffer_size": 18595,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -637,43 +628,82 @@
 	"expanded_folders":
 	[
 		"/home/mata/Documentos/WebProject/CIWeb",
-		"/home/mata/Documentos/WebProject/CIWeb/bower_components",
-		"/home/mata/Documentos/WebProject/CIWeb/bower_components/jasmine-core/lib",
-		"/home/mata/Documentos/WebProject/CIWeb/data",
-		"/home/mata/Documentos/WebProject/CIWeb/src",
+		"/home/mata/Documentos/WebProject/CIWeb/docs",
 		"/home/mata/Documentos/WebProject/CIWeb/test",
-		"/home/mata/Documentos/WebProject/CIWeb/test/Matrix"
+		"/home/mata/Documentos/WebProject/CIWeb/test/TurboColors",
+		"/home/mata/Documentos/WebProject/CIWeb/test/libvision",
+		"/home/mata/Documentos/WebProject/CIWeb/test/tool"
 	],
 	"file_history":
 	[
-		"/home/mata/Documentos/WebProject/CIWeb/test/Matrix/Matrix.js",
+		"/home/mata/Documentos/WebProject/CIWeb/docs/TurboColors.md",
+		"/home/mata/Documentos/WebProject/CIWeb/test/libvision/index.html",
+		"/home/mata/Documentos/WebProject/CIWeb/README.md",
+		"/home/mata/Documentos/WebProject/CIWeb/test/TurboColors/index.html",
+		"/home/mata/Documentos/WebProject/CIWeb/test/TurboColors/images.js",
+		"/home/mata/Documentos/WebProject/CIWeb/test/tool/ascii2json.html",
+		"/var/www/html/facedetect/streamup/js/filters.js",
+		"/var/www/html/facedetect/streamup/js/camera.js",
+		"/tmp/mozilla_mata0/data-8.json",
+		"/tmp/mozilla_mata0/data-7.json",
+		"/tmp/mozilla_mata0/data-6.json",
+		"/tmp/mozilla_mata0/data-5.json",
+		"/tmp/mozilla_mata0/data-4.json",
+		"/tmp/mozilla_mata0/data-3.json",
+		"/home/mata/Documentos/WebProject/CIWeb/test/tool/ascii2json.js",
+		"/var/www/html/facedetect/streamup/js/main.js",
+		"/home/mata/Documentos/WebProject/CIWeb/src/TurboBrain.js",
+		"/home/mata/Documentos/WebProject/CIWeb/test/index.html",
+		"/home/mata/Documentos/WebProject/CIWeb/test/libvision/test.js",
+		"/home/mata/Documentos/WebProject/CIWeb/src/JSVisionLib.js",
+		"/home/mata/Documentos/WebProject/CIWeb/src/Morphology.js",
+		"/home/mata/Documentos/WebProject/CIWeb/test/clasify/index.html",
+		"/home/mata/Documentos/WebProject/CIWeb/test/testUnitCascade/face-detection.js",
+		"/home/mata/Documentos/WebProject/CIWeb/test/examples/face-detection-rectangle.png",
+		"/home/mata/Documentos/WebProject/CIWeb/test/LBP/index.html",
+		"/home/mata/Documentos/WebProject/CIWeb/test/LBP/test.js",
+		"/home/mata/Documentos/WebProject/CIWeb/test/LBP/data/histogram.js",
+		"/tmp/mozilla_mata0/data-2.json",
+		"/home/mata/Documentos/WebProject/CIWeb/test/LBP/data/histogram.txt",
+		"/home/mata/Documentos/WebProject/CIWeb/test/LBP/data/binary.js",
+		"/tmp/mozilla_mata0/data-1.json",
+		"/media/mata/60CC-DF49/CIWeb/test/LBP/data/binary.js",
+		"/home/mata/Documentos/WebProject/CIWeb/test/LBP/data/LBP.js",
+		"/tmp/mozilla_mata0/data.json",
+		"/home/mata/Documentos/WebProject/CIWeb/data/LBPCascade.js",
+		"/home/mata/Documentos/WebProject/CIWeb/test/windTest/index.html",
+		"/home/mata/Documentos/WebProject/CIWebOctaveTool/Feactures/LBP/LBP.m",
+		"/home/mata/Documentos/WebProject/CIWeb/test/LBP/data/lbp.json",
+		"/home/mata/Documentos/WebProject/SoulHand-App/bower.json",
+		"/home/mata/Documentos/WebProject/CIWeb/test/Matrix/test1.js",
 		"/home/mata/Documentos/WebProject/CIWeb/test/Matrix/index.html",
+		"/home/mata/Documentos/WebProject/CIWeb/test/LBP/templates/histogramNormalized.txt",
+		"/home/mata/Documentos/WebProject/CIWeb/test/LBP/templates/histogram.txt",
+		"/home/mata/Documentos/WebProject/CIWeb/test/LBPTest/index.html",
+		"/home/mata/Documentos/WebProject/chat/package.json",
+		"/home/mata/Documentos/WebProject/CIWeb/package.json",
+		"/home/mata/Documentos/WebProject/CIWeb/server.js",
+		"/home/mata/Documentos/WebProject/CIWeb/test/Matrix/Matrix.js",
+		"/home/mata/Documentos/WebProject/CIWeb/.gitignore",
+		"/home/mata/Documentos/WebProject/chat/src/routes.js",
+		"/home/mata/Documentos/WebProject/chat/src/middleware.js",
+		"/home/mata/Documentos/WebProject/CIWeb/haarcascade_frontalface_alt2.xml",
+		"/home/mata/Documentos/WebProject/CIWeb/test/Matrix/inmultiply.html",
 		"/home/mata/Documentos/WebProject/CIWeb/test/jasmine-core/lib/jasmine-core/jasmine.js",
 		"/home/mata/Documentos/WebProject/CIWeb/test/jasmine-core/lib/jasmine-core.js",
 		"/home/mata/Documentos/WebProject/CIWeb/src/Matrix.js",
-		"/home/mata/Documentos/WebProject/CIWeb/test/clasify/index.html",
 		"/home/mata/Documentos/WebProject/CIWeb/src/Worker.js",
 		"/home/mata/Documentos/WebProject/CIWeb/test/JVision/VisionConfig.js",
 		"/home/mata/Documentos/WebProject/CIWeb/src/JVCascade.js",
-		"/home/mata/Documentos/WebProject/CIWeb/data/LBPCascade.js",
-		"/tmp/mozilla_mata0/data-3.json",
-		"/tmp/mozilla_mata0/data-2.json",
-		"/tmp/mozilla_mata0/data-1.json",
-		"/tmp/mozilla_mata0/data.json",
 		"/home/mata/Documentos/WebProject/CIWeb/test/JVision/module.config.js",
 		"/home/mata/Documentos/WebProject/CIWeb/src/module.config.js",
 		"/home/mata/Documentos/WebProject/CIWeb/bower_components/jasmine-core/README.md",
 		"/home/mata/Documentos/WebProject/CIWeb/bower_components/jasmine-core/bower.json",
 		"/home/mata/Documentos/WebProject/CIWeb/bower_components/jasmine-core/package.json",
-		"/home/mata/Documentos/WebProject/CIWeb/src/TurboBrain.js",
 		"/home/mata/Documentos/WebProject/CIWeb/data/LBPClassify.js",
 		"/home/mata/Documentos/WebProject/CIWeb/scriptloadW.js",
 		"/home/mata/Documentos/WebProject/CIWeb/test/Matrix/Enlace hacia Matrix.js",
-		"/home/mata/Documentos/WebProject/CIWeb/src/JSVisionLib.js",
 		"/home/mata/Documentos/WebProject/SoulHand-App/tests/Functional/BaseTestCase.php",
-		"/tmp/mozilla_mata0/data-6.json",
-		"/tmp/mozilla_mata0/data-5.json",
-		"/tmp/mozilla_mata0/data-4.json",
 		"/home/mata/Documentos/WebProject/SoulHand-App/webpack.config.js",
 		"/home/mata/Documentos/WebProject/SoulHand-App/tsconfig.json",
 		"/home/mata/Documentos/WebProject/SoulHand-App/package.json",
@@ -686,20 +716,15 @@
 		"/home/mata/Documentos/WebProject/SoulHand-App/phpunit.xml",
 		"/home/mata/Documentos/WebProject/SoulHand-App/src/php/settings.php",
 		"/home/mata/Documentos/WebProject/SoulHand-App/vendor/autoload.php",
-		"/tmp/mozilla_mata0/data-8.json",
-		"/tmp/mozilla_mata0/data-7.json",
 		"/home/mata/Documentos/WebProject/CIWeb/test/JVision/index.html",
 		"/home/mata/Documentos/WebProject/CIWeb/src/geometry.js",
 		"/home/mata/Documentos/WebProject/CIWeb/src/TurboColors.js",
-		"/home/mata/Documentos/WebProject/CIWeb/src/Morphology.js",
 		"/home/mata/Documentos/WebProject/CIWeb/src/JVision.js",
-		"/home/mata/Documentos/WebProject/CIWeb/test/testUnitCascade/face-detection.js",
 		"/home/mata/Documentos/WebProject/CIWeb/node_modules/get-pixels/node_modules/ndarray/ndarray.js",
 		"/home/mata/Documentos/WebProject/CIWeb/node_modules/get-pixels/node-pixels.js",
 		"/home/mata/Documentos/WebProject/CIWeb/node_modules/get-pixels/node_modules/ndarray/README.md",
 		"/home/mata/Documentos/WebProject/CIWeb/node_modules/get-pixels/dom-pixels.js",
 		"/home/mata/Documentos/WebProject/CIWeb/node_modules/get-pixels/README.md",
-		"/home/mata/Documentos/WebProject/CIWeb/package.json",
 		"/home/mata/Documentos/WebProject/CIWeb/test/face-detection.js",
 		"/home/mata/Documentos/WebProject/CIWeb/node_modules/opencv/examples/face-detection-rectangle.js",
 		"/home/mata/Documentos/WebProject/CIWeb/node_modules/opencv/examples/car-detection.js",
@@ -710,13 +735,11 @@
 		"/home/mata/Documentos/WebProject/CIWeb/test/JVision/JVCascade.js",
 		"/home/mata/Documentos/WebProject/CIWeb/test/JVision/JVision.js",
 		"/home/mata/Documentos/WebProject/CIWeb/src/TurboBrain.src.js",
-		"/home/mata/Documentos/WebProject/CIWeb/.gitignore",
 		"/home/mata/Documentos/WebProject/CIWeb/bower.json",
 		"/home/mata/Documentos/WebProject/CIWeb/CIWeb.sublime-project",
 		"/home/mata/Documentos/WebProject/CIWeb/.git/logs/HEAD",
 		"/home/mata/Documentos/WebProject/CIWeb/src/LBPCascade.js",
 		"/home/mata/Documentos/WebProject/CIWeb/test/JVision/LBPCascade.js",
-		"/home/mata/Documentos/WebProject/CIWeb/README.md",
 		"/home/mata/Documentos/WebProject/CIWeb/test/JVision/sigmoid.html",
 		"/home/mata/Descargas/Telegram Desktop/fpdf/report/report.php",
 		"/home/mata/Descargas/Telegram Desktop/fpdf/install.txt",
@@ -724,8 +747,6 @@
 		"/home/mata/Descargas/Telegram Desktop/fpdf/ejemplos.txt",
 		"/home/mata/Documentos/WebProject/CIWeb/test/Matrix/Matrix.src.js",
 		"/home/mata/Documentos/WebProject/CIWeb/test/windTest/VisionConfig.js",
-		"/home/mata/Documentos/WebProject/CIWeb/test/windTest/index.html",
-		"/home/mata/Documentos/WebProject/CIWeb/test/LBPTest/index.html",
 		"/home/mata/Documentos/WebProject/CIWeb/test/LBPTest/templates/histogram.txt",
 		"/home/mata/Documentos/WebProject/CIWeb/test/JSVisionLib/index.html",
 		"/home/mata/Escritorio/LBPCascade/test.m",
@@ -742,38 +763,7 @@
 		"/home/mata/Escritorio/LBPCascade/gradientDescentBrain.m",
 		"/home/mata/Escritorio/LBPCascade/MathWork/input (copia).m",
 		"/home/mata/Escritorio/LBPCascade/gradientDescent.m",
-		"/home/mata/Descargas/machine-learning-ex4/ex4/nnCostFunction.m",
-		"/home/mata/Descargas/machine-learning-ex3/ex3/lrCostFunction.m",
-		"/home/mata/Escritorio/LBPCascade/computeCost.m",
-		"/home/mata/Documentos/Proyecto Tray. 2/opencv-3.0.0/data/lbpcascades/lbpcascade_frontalface.xml",
-		"/home/mata/Documentos/Proyecto Tray. 2/opencv-3.0.0/data/lbpcascades/lbpcascade_frontalcatface.xml",
-		"/home/mata/Escritorio/LBPCascade/loadfor.m",
-		"/home/mata/Escritorio/LBPCascade/images/sd18/sd18/sd18/single/f1_p0/01437_1_F.txt",
-		"/home/mata/Documentos/WebProject/CIWeb/Gruntfile.js",
-		"/home/mata/Documentos/WebProject/CIWeb/compresor.js",
-		"/home/mata/Documentos/WebProject/SoulHand-App/.gitignore",
-		"/home/mata/Documentos/WebProject/SoulHand-App/public/components/ciweb/min/module.config.js",
-		"/home/mata/Documentos/WebProject/SoulHand-App/public/VisionConfig.js",
-		"/home/mata/Documentos/WebProject/CIWeb/min/JVision.js",
-		"/home/mata/Documentos/WebProject/SoulHand-App/public/js/CIWeb/recognition.js",
-		"/home/mata/Documentos/WebProject/SoulHand/public/js/CIWeb/geometry.js",
-		"/home/mata/Documentos/WebProject/CIWeb/min/LBPCascade.js",
-		"/home/mata/Documentos/WebProject/CIWeb/min/LBPWorker.js",
-		"/home/mata/Documentos/WebProject/CIWeb/min/JSVisionLib.js",
-		"/home/mata/Documentos/WebProject/CIWeb/min/geometry.js",
-		"/home/mata/Documentos/WebProject/CIWeb/src/LBPEvaluate.js",
-		"/home/mata/Documentos/WebProject/CIWeb/src/LBPWorker.js",
-		"/home/mata/Documentos/WebProject/CIWeb/src/Matrix/Matrix.src.js",
-		"/home/mata/Documentos/WebProject/CIWeb/src/JVision/LBPWorker.js",
-		"/home/mata/Documentos/WebProject/CIWeb/src/Geometry/geometry.src.js",
-		"/home/mata/Documentos/WebProject/CIWeb/src/Morphology/Morphology.src.js",
-		"/home/mata/Documentos/WebProject/CIWeb/src/JVision/JVision.src.js",
-		"/home/mata/Documentos/WebProject/CIWeb/src/JVision/JVCascade.src.js",
-		"/home/mata/Escritorio/FaceRecognition-master/faces/README",
-		"/home/mata/Documentos/WebProject/SoulHand/composer.json",
-		"/home/mata/Escritorio/LBPCascade/MathWork/test.m",
-		"/home/mata/Escritorio/LBPCascade/MathWork/loadfor.m",
-		"/home/mata/Escritorio/LBPCascade/MathWork/loadX.m"
+		"/home/mata/Descargas/machine-learning-ex4/ex4/nnCostFunction.m"
 	],
 	"find":
 	{
@@ -792,6 +782,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"parseToLux",
+			"t",
+			"T",
+			"parseToYCrCb",
+			"parseToNormalized",
+			"parseToHSL",
+			"true",
+			"parseToTLS",
+			"parseToYCrCb",
+			"parseToNormalized",
+			"parseToHSL",
+			"parseToHSV",
+			"preview-filters",
+			"worker",
+			"Integer",
+			"binary1",
+			"dimension",
+			"[",
+			"]",
+			"[",
+			"jasmine",
+			"..",
+			"src",
+			"atan",
+			"result",
+			"true",
+			"isSimetry",
+			"simetrica",
+			"false",
+			"multiply",
+			"c",
 			"B",
 			"jasmine-2.0.0",
 			"sum",
@@ -888,38 +909,7 @@
 			"school'",
 			"data-role=\"select",
 			"checkBox",
-			"stringToBool",
-			"institute':",
-			"addWork",
-			"addCourse",
-			"empty($idWork)",
-			"empty($idInst)",
-			"$idWork=((empty($idWork)) ? \"'{$idWork}'\" : 'NULL');\n\t\t\t\t\t\t\t\t$idInst=((empty($idInst)) ? \"'{$idInst}'\" : 'NULL');\t\t\t\t\t\t\t\t",
-			"query_institute",
-			"idWork",
-			"query_institute",
-			"institute':",
-			"get':",
-			"title",
-			"institute':",
-			"institute'",
-			"institute':",
-			"school':",
-			"institute':",
-			"\"edit\"",
-			"school':",
-			"school\":",
-			"FROM PEOPLE_INSTITUTE INNER JOIN STUDENTS_INST_PERIOD_SCHOOL",
-			"INSTITUTE",
-			"school",
-			"edit",
-			"loadField",
-			"edit=\\\"true",
-			"edit=\"true",
-			"\"tel\"",
-			"space",
-			"underline",
-			"cell"
+			"stringToBool"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -927,6 +917,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
 			"1",
 			"0",
 			"1",
@@ -1023,19 +1014,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "test/Matrix/inmultiply.html",
+					"file": "test/TurboColors/test.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 740,
+						"buffer_size": 1595,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								143,
-								143
+								1556,
+								1556
 							]
 						],
 						"settings":
@@ -1047,15 +1038,15 @@
 								{
 									"1":
 									[
-										137,
-										142
+										1556,
+										1557
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/tag.png",
+										"Packages/BracketHighlighter/icons/round_bracket.png",
 										"brackethighlighter.default"
 									]
 								},
@@ -1063,8 +1054,8 @@
 								{
 									"1":
 									[
-										111,
-										116
+										1544,
+										1545
 									]
 								},
 								"unmatched":
@@ -1073,36 +1064,51 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -1112,166 +1118,33 @@
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "test/Matrix/test1.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3027,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1320,
-								1320
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										1334,
-										1335
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/square_bracket.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										1319,
-										1320
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
+								"bh_tag_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 806.0,
+						"translation.y": 648.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "test/Matrix/Matrix.js",
+					"buffer": 1,
+					"file": "src/TurboColors.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 22477,
+						"buffer_size": 18595,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12596,
-								12596
+								5242,
+								5242
 							]
 						],
 						"settings":
@@ -1281,27 +1154,12 @@
 							{
 								"close":
 								{
-									"1":
-									[
-										12595,
-										12596
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"brackethighlighter.default"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										12571,
-										12572
-									]
 								},
 								"unmatched":
 								{
@@ -1309,36 +1167,16 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -1349,31 +1187,51 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 9034.0,
+						"translation.y": 6065.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1381,7 +1239,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 21.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -1412,7 +1270,7 @@
 		"rows":
 		[
 			0.0,
-			0.489473684211,
+			0.490643274854,
 			1.0
 		]
 	},
@@ -1429,7 +1287,7 @@
 	"project": "CIWeb.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1459,7 +1317,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
