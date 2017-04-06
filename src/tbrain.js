@@ -19,19 +19,19 @@ var Tbrain={
 			return z;
 		},
 		//Función de costo para la Regresión Linear donde generará el valor de J de acuerdo a la distancia euclideana de la recta trasada por la hipotesis y los valores del vector entrenamiento (Revisado)
-		Cost:function(X,W,Y,lambda){
-			if(!lambda){
-				lambda=0;
-			}
-			var J=0,C=0;
-			var H=Tbrain.LinearRegression.Propagation(X,W);					
-			for(var i=0,n=H.length;i<n;i++){																				
-				J+=Math.pow(H[i]-Y[i],2);
-			}
-			for(var i=1,m=W.length;i<m;i++){																					
-				C+=Math.pow(Y[i],2);						
-			}					
-			J*=(1/(2*n))+((lambda/(2*n))*C);
+		Cost:function(X,W,Y){			
+			var J=0;
+			var H=Tbrain.LinearRegression.Propagation(X,W);
+			for(var i=0,n=H.length;i<n;i++){
+				if(isNaN(H[i])){
+					for(var j=0,m=H[i].length;j<m;j++){
+						J+=Math.pow(H[i][j]-Y[i][j],2);						
+					}
+					continue;
+				}												
+				J+=Math.pow(H[i]-Y[i],2);						
+			}								
+			J*=(1/(2*n));
 			return J;
 		},
 		Training:{
