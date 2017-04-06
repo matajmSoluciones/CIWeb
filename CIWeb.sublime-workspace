@@ -520,19 +520,28 @@
 	"buffers":
 	[
 		{
-			"file": "test/TurboColors/test.js",
+			"file": "/home/matajm/Documentos/SoulHand-App/node_modules/react/react.js",
 			"settings":
 			{
-				"buffer_size": 1595,
-				"encoding": "UTF-8",
+				"buffer_size": 56,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/TurboColors.js",
+			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 18595,
+				"buffer_size": 139,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "index.js"
+			}
+		},
+		{
+			"file": "src/TurboBrain.js",
+			"settings":
+			{
+				"buffer_size": 5919,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -627,15 +636,24 @@
 	},
 	"expanded_folders":
 	[
-		"/home/mata/Documentos/WebProject/CIWeb",
-		"/home/mata/Documentos/WebProject/CIWeb/docs",
-		"/home/mata/Documentos/WebProject/CIWeb/test",
-		"/home/mata/Documentos/WebProject/CIWeb/test/TurboColors",
-		"/home/mata/Documentos/WebProject/CIWeb/test/libvision",
-		"/home/mata/Documentos/WebProject/CIWeb/test/tool"
+		"/home/matajm/Documentos/CIWeb",
+		"/home/matajm/Documentos/CIWeb/src",
+		"/home/matajm/Documentos/CIWeb/test"
 	],
 	"file_history":
 	[
+		"/home/matajm/Documentos/CIWeb/src/mfunction.js",
+		"/home/matajm/Documentos/CIWeb/src/matrix.js",
+		"/home/matajm/Documentos/CIWeb/scriptloadW.js",
+		"/home/matajm/Documentos/CIWeb/test/mfunction.spec.js",
+		"/home/matajm/Documentos/CIWeb/test/matrix.spec.js",
+		"/home/matajm/Documentos/CIWeb/test/matrix/matrix.spec.js",
+		"/home/matajm/Documentos/CIWeb/test/matrix/mfunction.spec.js",
+		"/home/matajm/Documentos/CIWeb/test/Matrix/test1.js",
+		"/home/matajm/Documentos/CIWeb/src/step.js",
+		"/home/matajm/Documentos/CIWeb/src/function.js",
+		"/home/matajm/Documentos/CIWeb/test/TurboColors/test.js",
+		"/home/matajm/Documentos/CIWeb/src/TurboColors.js",
 		"/home/mata/Documentos/WebProject/CIWeb/docs/TurboColors.md",
 		"/home/mata/Documentos/WebProject/CIWeb/test/libvision/index.html",
 		"/home/mata/Documentos/WebProject/CIWeb/README.md",
@@ -751,19 +769,7 @@
 		"/home/mata/Documentos/WebProject/CIWeb/test/JSVisionLib/index.html",
 		"/home/mata/Escritorio/LBPCascade/test.m",
 		"/home/mata/Escritorio/LBPCascade/init.m",
-		"/home/mata/Escritorio/LBPCascade/MathWork/data.m",
-		"/home/mata/Escritorio/LBPCascade/.gitignore",
-		"/tmp/mozilla_mata0/data-11.json",
-		"/home/mata/Escritorio/LBPCascade/file",
-		"/tmp/mozilla_mata0/data-10.json",
-		"/tmp/mozilla_mata0/data-9.json",
-		"/home/mata/Escritorio/LBPCascade/MathWork/input.m",
-		"/home/mata/Documentos/WebProject/CIWeb/min/Worker.js",
-		"/home/mata/Escritorio/LBPCascade/computeCostBrain.m",
-		"/home/mata/Escritorio/LBPCascade/gradientDescentBrain.m",
-		"/home/mata/Escritorio/LBPCascade/MathWork/input (copia).m",
-		"/home/mata/Escritorio/LBPCascade/gradientDescent.m",
-		"/home/mata/Descargas/machine-learning-ex4/ex4/nnCostFunction.m"
+		"/home/mata/Escritorio/LBPCascade/MathWork/data.m"
 	],
 	"find":
 	{
@@ -782,6 +788,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"matrix",
+			"Matrix",
 			"parseToLux",
 			"t",
 			"T",
@@ -907,9 +915,7 @@
 			"previe",
 			"div.item",
 			"school'",
-			"data-role=\"select",
-			"checkBox",
-			"stringToBool"
+			"data-role=\"select"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1004,231 +1010,90 @@
 	"groups":
 	[
 		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "test/TurboColors/test.js",
+					"file": "/home/matajm/Documentos/SoulHand-App/node_modules/react/react.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1595,
+						"buffer_size": 56,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1556,
-								1556
+								56,
+								56
 							]
 						],
 						"settings":
 						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										1556,
-										1557
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"brackethighlighter.default"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										1544,
-										1545
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 648.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 139,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								137
+							]
+						],
+						"settings":
+						{
+							"auto_name": "index.js",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/TurboColors.js",
+					"buffer": 2,
+					"file": "src/TurboBrain.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18595,
+						"buffer_size": 5919,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5242,
-								5242
+								434,
+								434
 							]
 						],
 						"settings":
 						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 6065.0,
+						"translation.x": -0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1254,12 +1119,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -1270,7 +1129,6 @@
 		"rows":
 		[
 			0.0,
-			0.490643274854,
 			1.0
 		]
 	},
