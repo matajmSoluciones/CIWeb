@@ -63,21 +63,28 @@ var Tbrain={
 			return z;
 		},
 		//Función de costo para la Regresión Logistica donde generará el valor de J de acuerdo a la propiedad logaritma donde se separa en una función comprimida la función compleja cuando H =1 || H=0 de la recta trasada por la hipotesis y los valores del vector entrenamiento (Revisado)
-		Cost:function(X,W,Y,lambda){
-			if(!lambda){
-				lambda=0;
-			}
-			var J=0,C=0;
-			var H=Tbrain.LinearRegression.Propagation(X,W);
+		Cost:function(X,W,Y){
+			var J=0;
+			var H=Tbrain.LogisticRegression.Propagation(X,W);
 			for(var i=0,n=H.length;i<n;i++){
-				H[i]=MFunction.Sigmoidea(H[i]);
-				J+=(-Y[i]*Math.log(H[i]))-((1-Y[i])*Math.log(1-H[i]));
-			}
-			for(var i=1,m=W.length;i<m;i++){																					
-				C+=Math.pow(Y[i],2);						
-			}
-			J/=n+((lambda/(2*n))*C);
-			return J;
+				if(isNaN(H[i])){
+					for(var j=0,m=H[i].length;j<m;j++){						
+						if(Y[i][j]==1){
+							J+=-(Math.log(H[i][j]));
+						}else{
+							J+=-(Math.log(1-H[i][j]));
+						}
+					}
+					continue;
+				}												
+				if(Y[i]==1){
+					J+=-(Math.log(H[i]));
+				}else{
+					J+=-(Math.log(1-H[i]));
+				}
+			}								
+			J*=(1/(2*n));
+			return J;			
 		},
 		Training:{
 			//Descenso de gradient para una matriz x, w en el cual se intenta reducir la función de costo de acuerdo a los valores de Y vector de entrenamiento (revisado)
