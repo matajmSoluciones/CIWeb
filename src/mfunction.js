@@ -1,7 +1,7 @@
 'use strict';
 
 var MFunction={
-		Sigmoidea:function(X){			
+		Sigmoidea:function(X){
 			var result=NaN;
 			if(!isNaN(X)){
 				result=1/(1+Math.exp(-X));
@@ -20,10 +20,43 @@ var MFunction={
 			return result;
 		},
 		Sinuisodal:function(X,K){
-			return Math.sin(X+K);
+			if(!K){
+				K=0;
+			}
+			var result=NaN;
+			if(!isNaN(X)){
+				result=Math.sin(X+K);
+			}else if(X.length>0){
+				result=X.copyWithin();
+				for(var i=0,m=result.length;i<m;i++){
+					if(!isNaN(X[i])){
+						result[i]=Math.sin(X[i]+K);
+					}else{
+						for(var j=0,p=result[i].length;j<p;j++){
+							result[i][j]=Math.sin(X[i][j]+K);
+						}						
+					}
+				}
+			}
+			return result;
 		},
 		Normalized:function(X,min,max){
-			return (X-min)/(max-min);
+			var result=NaN;
+			if(!isNaN(X)){
+				result=(X-min)/(max-min);
+			}else if(X.length>0){
+				result=X.copyWithin();
+				for(var i=0,m=result.length;i<m;i++){
+					if(!isNaN(X[i])){
+						result[i]=(X[i]-min)/(max-min);
+					}else{
+						for(var j=0,p=result[i].length;j<p;j++){
+							result[i][j]=(X[i][j]-min)/(max-min);
+						}
+					}
+				}
+			}
+			return result;
 		},
 		Media:function(X){
 			var n=X.length,sum=0;

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"M",
+				"MFunction"
+			],
+			[
 				"hist",
 				"histogram1"
 			],
@@ -510,10 +514,6 @@
 			[
 				"key",
 				"keyarr"
-			],
-			[
-				"fiel",
-				"field"
 			]
 		]
 	},
@@ -528,22 +528,12 @@
 			}
 		},
 		{
-			"file": "index.js",
+			"contents": "Sistema de información de apoyo al seguimiento del ",
 			"settings":
 			{
-				"buffer_size": 139,
-				"encoding": "UTF-8",
+				"buffer_size": 51,
 				"line_ending": "Unix",
-				"name": "index.js"
-			}
-		},
-		{
-			"file": "src/TurboBrain.js",
-			"settings":
-			{
-				"buffer_size": 5919,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"name": "Sistema de información de apoyo al seguimiento del"
 			}
 		}
 	],
@@ -638,15 +628,19 @@
 	[
 		"/home/matajm/Documentos/CIWeb",
 		"/home/matajm/Documentos/CIWeb/src",
+		"/home/matajm/Documentos/CIWeb/temp-test",
 		"/home/matajm/Documentos/CIWeb/test"
 	],
 	"file_history":
 	[
-		"/home/matajm/Documentos/CIWeb/src/mfunction.js",
 		"/home/matajm/Documentos/CIWeb/src/matrix.js",
+		"/home/matajm/Documentos/CIWeb/src/mfunction.js",
+		"/home/matajm/Documentos/CIWeb/src/tbrain.js",
+		"/home/matajm/Documentos/CIWeb/test/tbrain.spec.js",
+		"/home/matajm/Documentos/CIWeb/test/matrix.spec.js",
+		"/home/matajm/Documentos/CIWeb/index.js",
 		"/home/matajm/Documentos/CIWeb/scriptloadW.js",
 		"/home/matajm/Documentos/CIWeb/test/mfunction.spec.js",
-		"/home/matajm/Documentos/CIWeb/test/matrix.spec.js",
 		"/home/matajm/Documentos/CIWeb/test/matrix/matrix.spec.js",
 		"/home/matajm/Documentos/CIWeb/test/matrix/mfunction.spec.js",
 		"/home/matajm/Documentos/CIWeb/test/Matrix/test1.js",
@@ -766,14 +760,11 @@
 		"/home/mata/Documentos/WebProject/CIWeb/test/Matrix/Matrix.src.js",
 		"/home/mata/Documentos/WebProject/CIWeb/test/windTest/VisionConfig.js",
 		"/home/mata/Documentos/WebProject/CIWeb/test/LBPTest/templates/histogram.txt",
-		"/home/mata/Documentos/WebProject/CIWeb/test/JSVisionLib/index.html",
-		"/home/mata/Escritorio/LBPCascade/test.m",
-		"/home/mata/Escritorio/LBPCascade/init.m",
-		"/home/mata/Escritorio/LBPCascade/MathWork/data.m"
+		"/home/mata/Documentos/WebProject/CIWeb/test/JSVisionLib/index.html"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -788,6 +779,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Float32Array",
+			"0",
+			"Linear",
+			"lambda",
 			"matrix",
 			"Matrix",
 			"parseToLux",
@@ -911,11 +906,7 @@
 			"nacionality'",
 			"nacionality",
 			";",
-			"data.role",
-			"previe",
-			"div.item",
-			"school'",
-			"data-role=\"select"
+			"data.role"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -923,6 +914,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Float64Array",
 			"",
 			"1",
 			"0",
@@ -1010,7 +1002,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1038,61 +1030,31 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 139,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								137,
-								137
-							]
-						],
-						"settings":
-						{
-							"auto_name": "index.js",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/TurboBrain.js",
+					"buffer": 1,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5919,
+						"buffer_size": 51,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								434,
-								434
+								51,
+								51
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"auto_name": "Sistema de información de apoyo al seguimiento del",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1145,7 +1107,7 @@
 	"project": "CIWeb.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

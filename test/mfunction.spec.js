@@ -27,5 +27,13 @@ describe('Funciones Aritmeticas Matriciales',function(){
 				expect(length<0.05).toBe(true);    		
 			}
 		}
+	});	
+	it('Sinosuidal valor 1',function(){
+		var a=MFunction.Sinuisodal(1);
+		expect(a).toBe(0.8414709848078965);
+	});	
+	it('Sinosuidal valor 1 y 3',function(){
+		var a=MFunction.Sinuisodal(1,3);
+		expect(a).toBe(-0.7568024953079282);
 	});
 });

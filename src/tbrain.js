@@ -37,8 +37,8 @@ var Tbrain={
 		Training:{
 			//Descenso de gradient para una matriz x, w en el cual se intenta reducir la función de costo de acuerdo a los valores de Y vector de entrenamiento (revisado)
 			GradientDescent:function(X,W,Y,A,lambda,iters){
-				var grad=new Float32Array(W.length);
-				var J_history=new Float32Array(iters);
+				var grad=new Float64Array(W.length);
+				var J_history=new Float64Array(iters);
 				for(var t=0;t<iters;t++){
 					for(var j=0,n=W.length;j<n;j++){
 						var H=Tbrain.LinearRegression.Propagation(X,W);
@@ -89,8 +89,8 @@ var Tbrain={
 		Training:{
 			//Descenso de gradient para una matriz x, w en el cual se intenta reducir la función de costo de acuerdo a los valores de Y vector de entrenamiento (revisado)
 			GradientDescent:function(X,W,Y,A,lambda,iters){
-				var grad=new Float32Array(W.length);
-				var J_history=new Float32Array(iters);
+				var grad=new Float64Array(W.length);
+				var J_history=new Float64Array(iters);
 				for(var t=0;t<iters;t++){
 					for(var j=0,n=W.length;j<n;j++){
 						var H=Tbrain.LinearRegression.Propagation(X,W);
@@ -148,13 +148,13 @@ module.exports=Tbrain;
 		mode=mode.toLowerCase();
 		var w=[],y=[],u=[];
 		for(var i=0,n=layers.length;i<n;i++){
-			y[y.length]=(bits!=64) ? new Float32Array(parseInt(layers[i])) : new Float64Array(parseInt(layers[i]));
+			y[y.length]=(bits!=64) ? new Float64Array(parseInt(layers[i])) : new Float64Array(parseInt(layers[i]));
 			if(i>0){
 				var index=w.length;
 				w[index]= new Array(parseInt(layers[i]));
-				u[index]=(bits!=64) ? new Float32Array(parseInt(layers[i])) : new Float64Array(parseInt(layers[i]));
+				u[index]=(bits!=64) ? new Float64Array(parseInt(layers[i])) : new Float64Array(parseInt(layers[i]));
 				for(var j=0,m=w[index].length;j<m;j++){
-					w[index][j]=(bits!=64) ? new Float32Array(parseInt(layers[i-1])) : new Float64Array(parseInt(layers[i-1]));
+					w[index][j]=(bits!=64) ? new Float64Array(parseInt(layers[i-1])) : new Float64Array(parseInt(layers[i-1]));
 				}			
 			}
 		}	
