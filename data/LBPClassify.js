@@ -1,1 +1,0 @@
-var _WEIGHT=Matrix.random(257,2);

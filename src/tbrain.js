@@ -12,7 +12,7 @@ var MFunction = require("./mfunction.js");
 'use strict';
 var Tbrain={	
 	//Metodos para la Regresión Linear Simple
-	LinearRegression:{
+	LinealRegression:{
 		//Propagación hace la operación de multiplicar la matriz X x W generando un valor que representa la recta de la hipotesis de la función OJO X deberá entrar ya transpuesta (revisado)
 		Propagation:function(X,W){
 			var z=Matrix.inmultiply(X,W);

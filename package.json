@@ -1,10 +1,13 @@
 {
   "name": "ciweb",
-  "version": "0.0.4",
+  "version": "0.0.3",
   "description": "Herramienta de desarrollo de inteligencia artificial en javascript",
   "main": "index.js",
   "directories": {
     "test": "test"
+  },
+  "bin": {
+    "ciweb-import": "bin/ciweb-import.sh"
   },
   "scripts": {
     "test": "node node_modules/jasmine-node/bin/jasmine-node --verbose test/"
